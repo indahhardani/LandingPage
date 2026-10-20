@@ -14,19 +14,19 @@
   <style>
     /* Glow Animation untuk Logo Hypast */
     @keyframes pulseGlow {
-      0%, 100% { transform: scale(1); box-shadow: 0 0 30px rgba(59, 130, 246, 0.4); }
-      50% { transform: scale(1.05); box-shadow: 0 0 60px rgba(99, 102, 241, 0.6); }
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.4)); }
+      50% { transform: scale(1.05); filter: drop-shadow(0 0 40px rgba(99, 102, 241, 0.6)); }
     }
     .hypast-logo-glow {
-      animation: pulseGlow 4s infinite ease-in-out;
+      animation: pulseGlow 3.5s infinite ease-in-out;
     }
   </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col justify-between antialiased relative overflow-hidden">
 
   <!-- Background Decorative Blur Elements -->
-  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
-  <div class="absolute bottom-1/4 left-1/2 -translate-x-1/2 translate-y-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+  <div class="absolute bottom-1/4 left-1/2 -translate-x-1/2 translate-y-1/2 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 
   <!-- Header -->
   <header class="p-6 flex items-center justify-between z-10 max-w-7xl w-full mx-auto">
@@ -55,23 +55,15 @@
     </div>
 
     <!-- Interactive Central Hypast Logo Button -->
-    <div class="relative group cursor-pointer" onclick="openModuleModal()">
-      <div class="w-36 h-36 md:w-44 md:h-44 rounded-full bg-gradient-to-tr from-blue-600 via-indigo-600 to-sky-400 flex items-center justify-center hypast-logo-glow transition-all duration-300 group-hover:scale-110 p-1">
+    <div class="relative group cursor-pointer my-4" onclick="openModuleModal()">
+      <div class="w-44 h-44 md:w-52 md:h-52 rounded-full bg-slate-900/60 border border-blue-500/30 backdrop-blur-md flex flex-col items-center justify-center hypast-logo-glow transition-all duration-300 group-hover:border-blue-400/80 group-hover:scale-105 p-6 relative">
         
-        <!-- Inner Circular Container dengan Logo Vector Hypast -->
-        <div class="w-full h-full rounded-full bg-slate-950 flex flex-col items-center justify-center border border-slate-800/80 p-4 relative overflow-hidden">
-          
-          <!-- Vector Logo SVG Hypast Asli -->
-          <svg viewBox="0 0 100 100" class="w-16 h-16 md:w-20 md:y-20 drop-shadow-[0_0_15px_rgba(59,130,246,0.6)] transition-transform duration-300 group-hover:scale-110" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 28 18 L 40 18 L 40 42 C 40 52 50 60 60 60 C 70 60 72 50 72 40 L 72 36 L 84 36 L 84 40 C 84 62 70 72 54 72 C 40 72 28 62 28 46 Z" fill="#3B82F6"/>
-            <path d="M 58 36 L 70 36 L 70 82 L 58 82 Z" fill="#3B82F6"/>
-          </svg>
+        <!-- Pemanggilan Gambar Logo Asli -->
+        <img src="logo.png" alt="Hypast Logo" class="w-28 h-28 md:w-32 md:h-32 object-contain mix-blend-screen transition-transform duration-300 group-hover:scale-110">
 
-          <!-- Text Indicator -->
-          <span class="text-[9px] text-slate-400 uppercase tracking-widest font-semibold mt-1">Click to Enter</span>
-          
-        </div>
-
+        <!-- Teks Indikator Petunjuk -->
+        <span class="text-[9px] text-slate-400 uppercase tracking-widest font-bold mt-2 group-hover:text-blue-300 transition-colors">Click to Enter</span>
+        
       </div>
     </div>
 
