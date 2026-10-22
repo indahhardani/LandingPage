@@ -31,7 +31,7 @@
     }
   </style>
 </head>
-<!-- Latar belakang menggunakan gradien linier: 30% Biru (kiri) ke 70% Teal (kanan) -->
+<!-- Latar belakang utama menggunakan gradien linier -->
 <body class="bg-gradient-to-r from-[#1d6bd7] via-[#1bb2aa] to-[#2ed8ac] text-slate-100 min-h-screen flex flex-col justify-between antialiased relative overflow-hidden">
 
   <!-- Background Decorative Blur Elements -->
@@ -85,17 +85,19 @@
   </footer>
 
   <!-- MODAL: PILIHAN MODUL (APPS) -->
-  <div id="module-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 hidden">
-    <!-- Latar belakang card modal disesuaikan dengan gradasi 60% biru ke 40% teal -->
+  <!-- Backdrop dijadikan transparan tanpa efek menggelap -->
+  <div id="module-modal" class="fixed inset-0 z-50 bg-transparent flex items-center justify-center p-4 hidden">
+    
+    <!-- Latar belakang card modal dengan gradasi 60% biru ke 40% teal -->
     <div class="bg-gradient-to-r from-[#1d6bd7] via-[#1d6bd7] via-60% to-[#2ed8ac] border border-teal-500/30 w-full max-w-4xl rounded-3xl p-6 md:p-8 space-y-6 shadow-2xl relative">
       
-      <button onclick="closeModuleModal()" class="absolute top-6 right-6 text-slate-400 hover:text-white transition">
+      <button onclick="closeModuleModal()" class="absolute top-6 right-6 text-slate-300 hover:text-white transition">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
 
       <div class="text-center space-y-1">
         <h3 class="text-lg font-bold text-white">Pick Your HypeMe! Module</h3>
-        <p class="text-xs text-slate-200">Choose a module to get started</p>
+        <p class="text-xs text-slate-100">Choose a module to get started</p>
       </div>
 
       <!-- Grid Cards untuk 3 Aplikasi Terpisah -->
